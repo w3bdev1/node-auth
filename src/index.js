@@ -6,4 +6,8 @@ const user = {
 	password: '12345'
 }
 
-console.log(hashedPassword(user.password))
+const addUser = (username, password) => {
+	saveUserData(username, hashedPassword(password), './db.json')
+}
+
+addUser(user.username, user.password)
